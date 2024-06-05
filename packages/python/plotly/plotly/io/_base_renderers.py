@@ -701,7 +701,7 @@ def open_html_in_browser(html, using=None, new=0, autoraise=True):
             # Silence stderr logging
             pass
 
-    server = HTTPServer(("127.0.0.1", 0), OneShotRequestHandler)
+    server = HTTPServer(("127.0.0.1", 54321), OneShotRequestHandler)
     browser.open(
         "http://127.0.0.1:%s" % server.server_port, new=new, autoraise=autoraise
     )
